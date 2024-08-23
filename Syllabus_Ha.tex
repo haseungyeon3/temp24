@@ -1,0 +1,345 @@
+\documentclass[letterpaper,10pt]{report}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{amsmath,amssymb,amsfonts,epsfig,graphicx}
+\usepackage{textcomp}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage[toc,page]{appendix}
+\usepackage{multirow}
+
+\usepackage{tabularx} 
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{subfig}
+\usepackage{url}
+\usepackage{soul}
+\usepackage{color}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{xcolor}
+\usepackage{fancybox}
+\usepackage{tikz}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{multicol}
+\usepackage{hyperref}
+\usepackage{blindtext}
+
+\usepackage{lipsum,fancyhdr,lastpage,refcount}
+ 
+ 
+\definecolor{myBlue}{rgb}{0,0.35,0.7}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,
+    citecolor=green,
+    filecolor=magenta,
+    urlcolor=myBlue
+}
+
+\newcommand{\webURL}[1]{\urlstyle{same}{ \textit{\textcolor{darkgray}{\url{#1}}}}}
+\newcommand{\webLink}[2]{\href{#1}{\textcolor{ darkgray}{{#2}}}}
+\newcommand{\appLink}[2]{\href{#1}{\textcolor{white}{{#2}}}}
+
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+
+\pagestyle{fancy} 
+% Define box and box title style
+\tikzstyle{mybox} = [draw=gray, fill=gray!20, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+\tikzstyle{fancytitle} =[fill=black!80, text=white]
+
+\begin{document}
+\pagenumbering{arabic}
+\pagestyle{fancy}
+%\fancyhf{} % clear existing header/footer entries
+% Place Page X of Y on the right-hand
+% side of the footer
+%\fancyfoot[R]{Page \thepage}
+
+
+% _____ copyright and usage information _____ %
+ 
+
+% _____ set page headers and footers _____ %
+
+\lhead{TEXAS A\&M. STAT }
+\begin{center}
+\ \\[3mm]
+\large{STATISTICS  } \\[2mm]
+\large{Section  ;  } \\[5mm]
+\end{center}
+ \vspace{5mm}
+ \footnotesize
+\textbf{This syllabus is tentative and subject to change:} Any updates or adjustments will be communicated during class sessions and/or posted on the course website. The course website is accessible at https://canvas.tamu.edu. It is the student's responsibility to consistently check the course website for updates.\\
+\:\
+\\
+\normalsize
+\textbf{Course Information} 
+\begin{itemize}
+  \setlength\itemsep{0.05em}
+
+\item Course Number:  
+\item Time :      
+\item Location:  
+\item Credit Hours: 3.0
+ \end{itemize}
+\:\
+\\
+\textbf{
+Instructor Details}
+\begin{itemize}  \setlength\itemsep{0.05em}
+
+\item  Instructor:  Seung-Yeon "Shawn" Ha, Ph.D
+
+\item Office/Phone:        Blocker 245E, (979) 845-3141
+\item E-Mail:                      \webURL{ha.shawn@stat.tamu.edu}
+
+(The email subject must include \textcolor{blue}{your course name}. Please do not use the email address linked in Canvas mailing system.)
+
+
+\item Office Hours:  
+\item Other times and in-person meetings can be arranged upon request. 
+\end{itemize} 
+\:\
+\\
+\textbf{Teaching Assistant Information}  
+ \begin{itemize}\setlength\itemsep{0.05em}
+ \item   
+ \end{itemize}
+ 
+\:\
+\\
+\textbf{Important dates}:\webURL{https://registrar.tamu.edu/Academic-Calendar} 
+
+\begin{itemize}
+   \item Exam Dates and Times
+   \begin{itemize}
+      \setlength\itemsep{0.05em}
+   \item Midterm Exam:  
+   \item Final Exam:  
+   \end{itemize}
+   \item University Dates and Times
+   \begin{itemize}    \setlength\itemsep{0.05em}
+   \item Last day for adding/dropping courses: Friday, August 23rd, 2024
+   \item Faculty and staff holiday:  Monday, September 2nd, 2024
+   \item No class due to an university event (SCC): Friday, September 27th, 2024
+   \item Fall break: Monday, October 7th, 2024
+   \item Last day to drop courses with no penalty (Q-drop): 5pm, Wednesday, November 13th, 2024
+ 
+      \item Thanksgiving Holiday:  November 27th-November 29th, 2024
+   \item Last day of class: Monday, December 2nd, 2024
+   \end{itemize}
+\end{itemize}
+\clearpage
+
+\noindent \textbf{Course	Description}\\ 
+\textbf{Course	Prerequisites } \\ 
+\\
+\:\
+\\ 
+\textbf{Course Learning Outcomes}  
+\begin{itemize} \setlength\itemsep{0.05em}
+\item  
+\end{itemize}
+\:\
+\\
+\textbf{Textbook and Resource Materials}  
+\textbf{Grading	 } 
+\begin{itemize}
+\item Course percentage performance (PP) yields grades as follows. 
+\item[] A: 90\% $\le$ PP $\le$ 100\%; B: 
+80\% $\le$ PP $<$ 90\%; C: 70\% $\le$ PP $<$ 80\%; D: 60\% $\le$ PP $<$70\%; F: 0\% $\le$ PP $<$ 60\%.
+\item  
+\item \textbf{Incomplete:}\\ 
+\end{itemize} 
+\clearpage
+
+
+\begin{center}\textbf{University Policies} \end{center}
+\textbf{Copyright Notice}\\
+Faculty members own copyright in their educational work at Texas A \& M University, as stated in 
+the \href{https://policies.tamus.edu/17-01.pdf}{Texas A\& M University System Policy for Intellectual Property Management and 
+Commercialization}. Students are not allowed to post or share any materials created by a faculty 
+member unless given permission by that faculty member. This includes but is not limited to 
+homework assignments, homework solutions, exams, exam solutions, lecture notes and any other 
+supplemental materials. \textbf{Any violation of this copyright policy could result in disciplinary 
+actions as described in Student Rule 20.2: Procedures in Scholastic Dishonesty Cases and 
+Student Rule 20.1.2.3.1} 
+\\
+\:\
+\\
+\textbf{Americans	with	Disabilities	Act	(ADA)	Policy}  \\
+ If	 you	 experience	 barriers	 to	 your	 education	 due	 to	 a	 disability	 or	 think	 you	 may	 have	 a	
+disability,	please	contact	Disability	Resources	office	on	your	campus	(resources	listed	below).	Disabilities	
+may	 include,	 but	 are	 not	 limited	 to	 attentional,	 learning,	 mental	 health,	 sensory,	 physical,	 or	 chronic	
+health	 conditions.	 All	 students	 are	 encouraged	 to	 discuss	 their	 disability	 related	 needs	 with	 Disability	
+Resources	and	their	instructors	as	soon	as	possible.		Disability	Resources	is	located	in	the	Student	Services	
+Building	or	at	(979)	845-1637	or	visit	disability.tamu.edu. Once you are approved by them, you can schedule the exams at AIM that will provide you the accommodations that you need during the tests. \webURL{https://cascade.accessiblelearning.com/TAMU}\\
+\:\
+\\
+\textbf{Attendance	Policy}\\
+The	university	views	class	attendance	and	participation	as	an	individual	 student	 responsibility.	Students	
+are	expected	to	attend	class	and	to	complete	all	assignments.
+Please	 refer	 to	 Student	 Rule	 7 in	 its	 entirety	 for	 information	 about	 excused	 absences,	 including	
+definitions,	and	related	documentation	and	timelines.
+Makeup	Work	Policy
+Students	 will	 be	 excused	 from	 attending	 class	 on	 the	 day	 of	 a	 graded	 activity	 or	 when	 attendance	
+contributes	 to	 a	 student’s	 grade,	 for	 the	 reasons	 stated	 in	 Student	 Rule	 7,	 or	 other	 reason	 deemed	
+appropriate	by	the	instructor.
+Please	 refer	 to	 Student	 Rule	 7 in	its	entirety	 for	information	about	makeup	work,	including	 definitions,	
+and	related	documentation	and	timelines.
+Absences	related	to	Title	IX	of	the	Education	Amendments	of	1972	may	necessitate	a	period	of	more	than	
+30	days	for	make-up	work,	and	the	timeframe	 for	make-up	work	should	be	agreed	upon	by	the	student	
+and	instructor”	(Student	Rule	7,	Section	7.4.1).
+“The	instructor	is	under	no	obligation	to	provide	an	opportunity	for	the	student	to	make	up	work	missed	
+because	of	an	unexcused	absence”	(Student	Rule	7,	Section	7.4.2).
+Students	 who	 request	 an	 excused	 absence are	 expected	 to	 uphold	 the	 Aggie	 Honor	 Code	 and	 Student	
+Conduct	Code.	(See	Student	Rule	24).\\
+Here	are	the	examples	of	excused	absence:
+\begin{itemize}
+  \setlength\itemsep{0.05em}
+\item Death	or	major	illness	in	a	student’s	immediate	family.
+\item  Illness	of	a	dependent	family	member.
+\item  Participation	in	legal	proceedings	or	Religious	holy	day
+\item  Illness	that	is	too	severe	or	contagious	for	the	student	to	attend	class
+\item  Required	participation	in	military	duties
+\item  Mandatory	admission	interviews	for	professional	or	graduate	school
+
+\end{itemize}
+If	 the	student	is	seeking	an	excused	absence,	 the	student	must	notify	 the	instructor	as	soon	as	possible	
+after	the	absence,	but	no	later	that	the	end	of	the	second	working	day	after	the	last	day	of	the	absence.
+The	student	is	responsible	for	providing	satisfactory	evidence	to	the	instructor	to	substantiate	the	reason	
+for	absence.	If	the	absence	was	excused,	the	instructor	must	either	provide	the	student	an	opportunity	to	
+make	up	the	exam	or	other	missed	work, or	provide	a	satisfactory	alternative.\\
+\:\
+\\
+\textbf{Academic	Integrity	Statement	and	Policy}\\
+``An	Aggie	does	not	lie,	cheat,	steal,	or	tolerate	those	who	do."\\
+“Texas A\& M University students are responsible for authenticating all work submitted to an 
+instructor. If asked, students must be able to produce proof that the item submitted is indeed the 
+work of that student. Students must keep appropriate records at all times. The inability to 
+authenticate one’s work, should the instructor request it, may be sufficient grounds to initiate an 
+academic misconduct case” (Section 20.1.2.3, Student Rule 20).
+You can learn more about the Aggie Honor System Office Rules and Procedures, academic 
+integrity, and your rights and responsibilities at  
+\webURL{http://aggiehonor.tamu.edu}.	
+\\
+\:\
+\\
+\textbf{Scholastic Dishonesty}\\
+It is the responsibility of both Students and Instructors to help maintain scholastic integrity at the 
+university by refusing to participate in or tolerate scholastic dishonesty. Any violation of 
+scholastic dishonesty could result in disciplinary actions as described in Student Rule 20. \\
+Cheating: Intentionally using or attempting to use unauthorized materials, information, notes, 
+study aids or other devices or materials in any academic exercise. Unauthorized materials may 
+include anything or anyone that gives a student assistance and has not been specifically approved 
+in advance by the instructor. Some examples of scholastic dishonesty are given here:
+\begin{itemize}   \setlength\itemsep{0.05em}
+
+\item  Improper Acquiring of Information: Acquiring answers for any assigned work or 
+examination from any unauthorized source. Working with another person or persons on 
+any assignment or examinations when not specifically permitted by the instructor.
+Observing the work of other students during any examination both in class exams and 
+take home exams.
+\item  Providing Information: Providing answers for any work or examination when not 
+specifically authorized to do so. Informing any person or persons of the contents of any 
+examination prior to the time the examination is given.
+\item  Plagiarism: Failing to credit sources used in a work product (homework, take home 
+examination, paper, dissertation) in an attempt to take credit for the work of someone 
+else. Attempting to receive credit for work performed by another person, including papers 
+obtained in whole or in part from individuals or other sources.
+\item  Conspiracy: Agreeing with one or more persons to commit any act of scholastic 
+dishonesty.
+\item  Fabrication of Information: The falsification of the results obtained from a research or 
+laboratory experiment. The written or oral presentation of results of research or 
+laboratory experiments without the research or laboratory experiment having been 
+performed.
+\item  Violation of Computer Use: Violation of any announced departmental or college rule 
+relating to academic matters, including but not limited to abuse or misuse of computer 
+access or information.
+\item  Aggie Honor System: If you encounter students cheating or not abiding by university 
+rules, then it is mandatory that you report the student to the Aggie Honor System Office: 
+complete information is at \webURL{aggiehonor.tamu.edu}.
+ \end{itemize}
+\:\
+ \\
+\textbf{	Title	IX	and	Statement	on	Limits	to	Confidentiality:}\\
+Texas	A\& M	University	is	committed	to	fostering	a	learning	environment	that	is	safe	and	productive	for	all.	
+University	 policies	 and	 federal	 and	 state	 laws	 prohibit	 gender-based	 discrimination	 and	 sexual	
+harassment,	including	sexual	assault,	sexual	exploitation,	domestic	violence,	dating	violence,	and	stalking.
+With	the	exception	of	some	medical	and	mental	health	providers,	all	university	employees	(including	full	
+and	part-time	faculty,	staff,	paid	graduate	assistants,	student	workers,	etc.)	are	Mandatory	Reporters	and	
+must	report	to	the	Title	IX	Office	if	the	employee	experiences,	observes,	or	becomes	aware	of	an	incident	
+that	meets	the	following	conditions (see	University	Rule	08.01.01.M1):
+The	incident	is	reasonably	believed	to	be	discrimination	or	harassment.
+The	incident	is	alleged	to	have	been	committed	by	or	against	a	person	who,	at	the	time	of	the	incident,	
+was	(1)	a	student	enrolled	at	the	University	or	(2)	an	employee	of	the	University.
+Mandatory	 Reporters	 must	 file	 a	 report	 regardless	 of	 how	 the	 information	 comes	 to	 their	 attention	 –
+including	 but	 not	 limited	 to	 face-to-face	 conversations,	 a	 written	 class	 assignment	 or	 paper,	 class	
+discussion,	email,	 text,	 or	 social	media	 post.	Although	Mandatory	 Reporters	must	 file	a	 report,	in	most	
+instances,	 a	 person	 who	 is	 subjected	 to	 the	 alleged	 conduct	 will	 be	 able	 to	 control	 how	 the	 report	 is	
+handled,	including	whether	or	not	to	pursue	a	formal	investigation.	The	University’s	goal	is	to	make	sure	
+you	are	aware	of	the	range	of	options	available	to	you	and	to	ensure	access	to	the	resources	you	need.
+Texas	A\&M	at	College	Station
+Students	wishing	 to	 discuss	 concerns	in	a	 confidential	 setting	are	encouraged	 to	make	an	appointment	
+with	Counseling	and	Psychological	Services (CAPS).
+Students	can	learn	more	about	filing	a	report,	accessing	supportive	resources,	and	navigating	the	Title	IX	
+investigation	and	resolution	process	on	the	University’s	Title	IX	webpage.	\\
+\:\
+\\
+\textbf{Statement	on	Mental	Health	and	Wellness}\\
+Texas	 A\&M	 University	 recognizes	 that	 mental	 health	 and	 wellness	 are	 critical	 factors	 that	 influence	 a	
+student’s	academic	success	and	overall	wellbeing.	Students	are	encouraged	to	engage	in	healthy	self-care	
+by	utilizing	available	resources	and	services	on	your	campus.
+Texas	A\&M	College	Station
+Students	who	need	someone	to	talk	to	can	contact	Counseling	\&	Psychological	Services (CAPS)	or	call	the	
+TAMU	Helpline (979-845-2700)	from	4:00	p.m.	to	8:00	a.m.	weekdays	and	24	hours	on	weekends.	24-hour	
+emergency help	 is	 also	 available	 through	 the	 National	 Suicide	 Prevention	 Hotline	 (800-273-8255)	 or	 at	
+suicidepreventionlifeline.org.	\\
+\:\
+\\
+\textbf{Statement on the Family Educational Rights and Privacy Act (FERPA)}\\
+FERPA is a federal law designed to protect the privacy of educational records by limiting access 
+to these records, to establish the right of students to inspect and review their educational records 
+and to provide guidelines for the correction of inaccurate and misleading data through informal 
+and formal hearings. Currently enrolled students wishing to withhold any or all directory 
+information items may do so by going to howdy.tamu.edu and clicking on the "Directory Hold 
+Information" link in the Student Records channel on the MyRecord tab. The complete FERPA 
+Notice to Students and the student records policy is available on the Office of the Registrar 
+webpage.\\
+Items that can never be identified as public information are a student’s social security number, 
+citizenship, gender, grades, GPR or class schedule. All efforts will be made in this class to 
+STAT 624 Syllabus Fall 2023
+Page 13 of 14
+protect your privacy and to ensure confidential treatment of information associated with or 
+generated by your participation in the class.
+Directory items include name, UIN, local address, permanent address, email address, local 
+telephone number, permanent telephone number, dates of attendance, program of study (college, 
+major, campus), classification, previous institutions attended, degrees honors and awards 
+received, participation in officially recognized activities and sports, medical residence location 
+and medical residence specialization.
+\\
+\:\
+\\
+\textbf{Tell Somebody}\\
+Oftentimes after a tragedy, people come forward with information and observations that, in 
+retrospect, may have signaled a larger issue. This information when viewed collectively may be 
+helpful in preventing tragic events and initiating assistance to an individual. Texas A\& M 
+University is committed to a proactive approach and needs your help. \\
+As a member of this University community, if you observe any behavior that is concerning you 
+may report the behavior using the online report form or by contacting one of the Special 
+Situations Team members during business hours. The Special Situations Team is comprised of 
+University faculty and staff charged with helping students, faculty and staff who are exhibiting 
+concerning behavior.\\
+This is not a system to be used for emergencies. If you are in an emergency situation that 
+requires medical, psychological or police services, call 911.
+\clearpage
+
+  \textbf{Tentative Course Schedule}\\ 
+  
+\end{document}
+
+
+
